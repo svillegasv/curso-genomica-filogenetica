@@ -1,0 +1,8 @@
+# Limpia las salidas de los cuadernos antes de cada commit: el estudiante los recibe sin
+# ejecutar (para predecir antes de ejecutar) y git solo ve los cambios reales.
+#   pip install pre-commit && pre-commit install
+repos:
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.9.1
+    hooks:
+      - id: nbstripout

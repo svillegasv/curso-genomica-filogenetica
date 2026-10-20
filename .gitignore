@@ -1,0 +1,9 @@
+.curso/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+# Los datos viven en Zenodo, no en git
+data/*
+!data/manifest.tsv
+!data/README.md

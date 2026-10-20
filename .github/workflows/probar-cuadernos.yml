@@ -1,0 +1,23 @@
+# Ejecuta todos los cuadernos de principio a fin en cada cambio (y cada lunes, para detectar
+# herramientas o enlaces que se rompen solos). Si algo falla, GitHub envía un correo.
+name: Probar cuadernos
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: "0 11 * * 1"
+  workflow_dispatch:
+jobs:
+  probar:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: mamba-org/setup-micromamba@v3
+        with:
+          environment-file: environment.yml
+          cache-environment: true
+      - run: python tools/probar.py

@@ -1,0 +1,21 @@
+# Entorno del curso para trabajar FUERA de Colab (y para las pruebas automáticas).
+#   conda env create -f environment.yml && conda activate genomica-filogenetica
+# En Colab no hace falta: utils/curso.py instala lo necesario. Las versiones fijadas aquí
+# (paquete=versión) también las usa curso.instalar() para lo que viene de bioconda.
+# Regla: se fija la versión de cada herramienta cuando se construye y prueba su unidad.
+name: genomica-filogenetica
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  - pip
+  - ipykernel
+  - papermill
+  - numpy
+  - pandas
+  - matplotlib
+  - biopython
+  # U0 bootcamp
+  - seqkit
+  - seqtk

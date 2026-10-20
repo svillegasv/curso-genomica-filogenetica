@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Si usa este material, cítelo así."
+title: "Genómica y Filogenética: curso de pregrado en Google Colab"
+authors:
+  - family-names: Villegas-Velásquez
+    given-names: Simón
+type: software
+license: [MIT, CC-BY-4.0]
+repository-code: "https://github.com/svillegasv/genomica-filogenetica"
+date-released: 2026-10-16

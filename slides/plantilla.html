@@ -1,0 +1,88 @@
+<!doctype html>
+<!--
+  Apoyo visual semanal (3–6 diapositivas). Copie este archivo como semana-NN.html y edite solo
+  el Markdown de cada <section>. Ábralo en el navegador: flechas para avanzar, F pantalla completa,
+  S notas del orador. PDF: agregue ?print-pdf a la URL e imprima.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Semana N · Genómica y Filogenética</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/white.min.css">
+  <style>
+    :root {
+      --r-background-color: #fcfcfb;
+      --r-main-color: #0b0b0b;
+      --r-heading-color: #0b0b0b;
+      --r-link-color: #2a78d6;
+      --r-main-font: "DejaVu Sans", "Helvetica Neue", Arial, sans-serif;
+      --r-heading-font: var(--r-main-font);
+      --r-main-font-size: 34px;
+      --r-heading-text-transform: none;
+    }
+    .reveal h1, .reveal h2 { font-weight: 700; text-align: left; }
+    .reveal p, .reveal ul, .reveal ol { text-align: left; }
+    .reveal .sub { color: #52514e; font-size: 0.7em; }
+    .reveal .reto { border-left: 6px solid #2a78d6; padding: 0.4em 0.8em; background: #e3eefb; }
+    .reveal img { border: none; box-shadow: none; }
+    .reveal .pie { position: absolute; bottom: -1.5em; left: 0; font-size: 0.45em; color: #898781; }
+  </style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+  <!-- 1. Mapa «dónde estamos» (cambie la etapa en la ruta de la imagen) -->
+  <section data-markdown><textarea data-template>
+## Semana N · Título
+<p class="sub">Unidad U · Genómica y Filogenética</p>
+
+![Mapa del curso](img/mapa-unix.svg)
+
+Note: Una frase que conecte con la semana anterior.
+  </textarea></section>
+
+  <!-- 2. Reto del día (+ la pregunta del quiz con más errores) -->
+  <section data-markdown><textarea data-template>
+## El reto de hoy
+
+<div class="reto">¿Pregunta que la sesión va a responder?</div>
+
+- Del quiz: la pregunta con más errores y por qué confunde
+  </textarea></section>
+
+  <!-- 3. Figura o diagrama conceptual (reutilice las figuras del cuaderno) -->
+  <section data-markdown><textarea data-template>
+## Una idea, una figura
+
+![Descripción de la figura](img/figura.svg)
+
+<p class="pie">Fuente: cuaderno de la semana N</p>
+  </textarea></section>
+
+  <!-- 4. Instrucciones de la dinámica -->
+  <section data-markdown><textarea data-template>
+## Dinámica: nombre
+
+- **Roles:** conductor (teclado) · navegante (lee y revisa)
+- **Tiempo:** 25 min, cambian de rol a los 12
+- **Entregable:** qué se sube y dónde
+  </textarea></section>
+
+  <!-- 5. (Solo semanas de apertura) Lanzamiento del problema o caso: borre esta sección si no aplica -->
+  <section data-markdown><textarea data-template>
+## Lanzamiento
+
+Contexto, una imagen y las preguntas abiertas con las que arranca el problema.
+  </textarea></section>
+
+</div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/markdown/markdown.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/notes/notes.min.js"></script>
+<script>
+  Reveal.initialize({ hash: true, slideNumber: "c/t", plugins: [RevealMarkdown, RevealNotes] });
+</script>
+</body>
+</html>
