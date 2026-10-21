@@ -7,7 +7,7 @@ https://creativecommons.org/licenses/by/4.0/deed.es
 Puede copiar, adaptar y redistribuir el material para cualquier fin, siempre que dé el crédito
 adecuado, enlace la licencia e indique si hizo cambios. Atribución sugerida:
 
-> Villegas-Velásquez, S. (2026). *Genómica y Filogenética* [curso en Colab]. https://github.com/svillegasv/genomica-filogenetica
+> Villegas-Velásquez, S. (2026). *Genómica y Filogenética* [curso en Colab]. https://github.com/svillegasv/curso-genomica-filogenetica
 
 El código está bajo licencia MIT (ver `LICENSE`).
 

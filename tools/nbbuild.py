@@ -9,7 +9,7 @@ import textwrap
 
 import nbformat as nbf
 
-REPO = "svillegasv/genomica-filogenetica"
+REPO = "svillegasv/curso-genomica-filogenetica"
 CURSO = "Genómica y Filogenética"
 AUTOR = "Simón Villegas-Velásquez"
 
@@ -39,7 +39,7 @@ SETUP = '''\
 import os, sys, urllib.request
 from pathlib import Path
 
-RAW = "https://raw.githubusercontent.com/svillegasv/genomica-filogenetica/main"
+RAW = "https://raw.githubusercontent.com/svillegasv/curso-genomica-filogenetica/main"
 _utils = next((p / "utils" for p in [Path.cwd(), *Path.cwd().parents]
                if (p / "utils" / "curso.py").exists()), None)
 if _utils is None:  # en Colab: se descargan las utilidades del curso

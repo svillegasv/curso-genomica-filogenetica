@@ -22,7 +22,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-REPO = "svillegasv/genomica-filogenetica"
+REPO = "svillegasv/curso-genomica-filogenetica"
 RAW = f"https://raw.githubusercontent.com/{REPO}/main"
 
 try:
