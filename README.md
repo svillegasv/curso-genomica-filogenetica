@@ -22,9 +22,16 @@ evolutiva de la población.
 
 ## Cómo usar los cuadernos
 
-1. Haga clic en **Abrir en Colab** junto al cuaderno de la semana.
+Cada semana tiene dos cuadernos:
+
+- **Sesión 1, cuaderno guiado:** se aprende la técnica con datos de demostración, iguales para todos.
+- **Sesión 2, cuaderno de proyecto:** el equipo aplica la técnica a **su** clon.
+
+1. Haga clic en **Abrir en Colab** junto al cuaderno.
 2. Ejecute primero la celda **⚙️ Configuración**.
-3. Para guardar su trabajo: *Archivo → Guardar una copia en Drive*.
+3. Guarde su copia: *Archivo → Guardar una copia en Drive*. Los cuadernos de proyecto van en la carpeta del proyecto
+   de su equipo, donde también quedan sus resultados de una semana a otra.
+4. En la semana 4, registre una sola vez el clon de su equipo: `curso.equipo("…")`.
 
 No necesita instalar nada: solo una cuenta de Google.
 
@@ -48,7 +55,8 @@ No necesita instalar nada: solo una cuenta de Google.
 ## Estructura del repositorio
 
 ```
-notebooks/   cuadernos por semana (00-plantilla.ipynb: estructura estándar)
+notebooks/   cuadernos guiados de la sesión 1 (00-plantilla.ipynb: estructura estándar)
+proyecto/    cuadernos de proyecto de la sesión 2 (00-plantilla-proyecto.ipynb)
 slides/      apoyo visual semanal (HTML; se abre en el navegador)
 utils/       curso.py (instalación, datos, proyecto) · estilo.py (figuras y mapa del curso)
 data/        manifest.tsv: los datos están en Zenodo, no en git

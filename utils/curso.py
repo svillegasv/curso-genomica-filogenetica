@@ -164,6 +164,33 @@ def proyecto(drive: bool = False) -> Path:
     return base
 
 
+# Clones de Ara-3 del curso (uno por equipo). Ver plan/03_datos_ltee.md del taller del docente.
+CLONES = ["REL1166B", "REL2181A", "REL4538A", "REL7179B", "ZDB478", "ZDB17", "ZDB25", "REL11365"]
+
+
+def equipo(clon: str | None = None) -> str:
+    """Guarda (una sola vez, en la semana 4) o lee el clon asignado al equipo.
+
+        curso.equipo("REL7179B")   # primera vez: queda guardado en la carpeta del proyecto
+        CLON = curso.equipo()      # semanas siguientes: lo lee
+    """
+    ruta = Path(os.environ.get("PROYECTO") or proyecto()) / "equipo.txt"
+    if clon:
+        if clon not in CLONES:
+            raise ValueError(f"{clon!r} no es un clon del curso. Opciones: {', '.join(CLONES)}")
+        ruta.write_text(clon + "\n")
+        print(f"✔ Clon del equipo guardado: {clon}")
+        return clon
+    if ruta.exists():
+        clon = ruta.read_text().strip()
+    elif os.environ.get("CURSO_EQUIPO"):        # pruebas automáticas
+        clon = os.environ["CURSO_EQUIPO"]
+    else:
+        raise RuntimeError('Aún no ha registrado su clon. Ejecute una vez: curso.equipo("CLON_ASIGNADO")')
+    print("Clon del equipo:", clon)
+    return clon
+
+
 def _md5(ruta: Path) -> str:
     h = hashlib.md5()
     with open(ruta, "rb") as f:

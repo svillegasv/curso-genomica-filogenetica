@@ -1,4 +1,4 @@
-"""Genera notebooks/00-plantilla.ipynb: la estructura que sigue todo cuaderno del curso.
+"""Genera notebooks/00-plantilla.ipynb: la estructura del cuaderno guiado de la sesión 1.
 
     python tools/crear_plantilla.py
 
@@ -12,7 +12,7 @@ PATH = "notebooks/00-plantilla.ipynb"
 nb = NB()
 
 nb.md(header(PATH, "Semana N · Título de la sesión", "Semana N (Unidad U)",
-             "RA1 — qué será capaz de hacer al final", "≈ 2 h", "Cuaderno de la semana anterior"))
+             "RA1 — qué será capaz de hacer al final", "≈ 1,5 h", "Cuaderno de la semana anterior"))
 
 nb.md("""
 ## 🧭 Dónde estamos
@@ -40,7 +40,10 @@ p = curso.proyecto()                       # en semanas 4+: curso.proyecto(drive
 """)
 
 nb.md("""
-## 1. Ejemplo resuelto
+## Bloque 1 · Primera idea de la sesión
+Cada bloque enseña una habilidad (una lección del outline). Un cuaderno de 1,5 h suele tener **2 o 3 bloques**.
+
+### Ejemplo resuelto
 Explicación corta con una comparación cotidiana, luego el comando o código completo.
 
 > 🤔 **Antes de ejecutar, prediga:** ¿cuántas secuencias tiene el archivo?
@@ -53,38 +56,54 @@ grep -c ">" data/processed/ejemplo.fasta
 """)
 nb.md("""
 > 🔎 **Qué observamos.** Interpretación en dos o tres frases: ¿coincidió con su predicción?
-""")
 
-nb.md("""
-## 2. Ejercicio guiado
-Complete los huecos `___`.
+### Ejercicio guiado
+Reemplace cada `COMPLETE` por su respuesta.
 """)
 nb.code("""
-# Ejercicio 1: cuente las bases de cada secuencia (complete el hueco)
-from pathlib import Path
-secuencias = Path(p / "data/processed/ejemplo.fasta").read_text().split()[1::2]
-longitudes = [len(s) for s in secuencias]   # ← en la versión del estudiante: [___ for s in secuencias]
-longitudes
+%%bash
+# Ejercicio 1: cuente las líneas del archivo (en la versión del estudiante: wc COMPLETE data/processed/ejemplo.fasta)
+cd $PROYECTO
+wc -l data/processed/ejemplo.fasta
 """)
+# En celdas de solución, la shell va con "!" (el #@title debe ser la primera línea, antes de cualquier %%bash)
 nb.code(solucion(1, """
-longitudes = [len(s) for s in secuencias]
-print(longitudes)
+!cd $PROYECTO && wc -l data/processed/ejemplo.fasta
 """))
 
 nb.md("""
-## 3. Reto abierto
-Una pregunta sin receta que exija combinar lo de hoy. Para trabajar en parejas (conductor/navegante).
+## Bloque 2 · Segunda idea de la sesión
+El mismo ciclo: predecir → ejemplo resuelto → ejercicio guiado.
+
+### Ejemplo resuelto
+> 🤔 **Antes de ejecutar, prediga:** ¿qué longitud tiene cada secuencia?
 """)
+nb.code("""
+from pathlib import Path
+secuencias = Path(p / "data/processed/ejemplo.fasta").read_text().split()[1::2]
+[len(s) for s in secuencias]
+""")
+nb.md("""
+> 🔎 **Qué observamos.** …
+
+### Ejercicio guiado
+""")
+nb.code("""
+# Ejercicio 2: cuente cuántas G tiene cada secuencia (en la versión del estudiante: [COMPLETE for s in secuencias])
+[s.count("G") for s in secuencias]
+""")
+nb.code(solucion(2, """
+print([s.count("G") for s in secuencias])
+"""))
 
 nb.md("""
 ## ✅ Compruebe su comprensión
 1. Pregunta de recuperación sobre la idea central.
 2. Pregunta que conecte con la semana anterior.
 
-## 📓 Bitácora
-- ¿Qué aprendí?
-- ¿Qué no me quedó claro?
-- ¿Qué hago con esto en el problema del LTEE?
+## 🚀 Para ir más allá (opcional)
+Un reto sin solución para quien termine antes. Admite varias respuestas.
+El reto del proyecto se trabaja en la sesión 2, en el cuaderno de proyecto.
 
 ## 📚 Referencias
 Solo referencias verificadas.

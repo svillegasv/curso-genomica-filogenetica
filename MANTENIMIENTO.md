@@ -10,8 +10,11 @@ python tools/probar.py notebooks/semana-01/*.ipynb
 GitHub Actions corre lo mismo en cada cambio y cada lunes (pestaña *Actions* del repositorio).
 
 ## Crear un cuaderno nuevo
-Copie `notebooks/00-plantilla.ipynb` a `notebooks/semana-NN/` y edítelo. El `.ipynb` es la fuente de
-verdad: `tools/crear_plantilla.py` solo regenera la plantilla.
+- Cuaderno guiado (sesión 1): copie `notebooks/00-plantilla.ipynb` a `notebooks/semana-NN/`.
+- Cuaderno de proyecto (sesión 2): copie `proyecto/00-plantilla-proyecto.ipynb` a `proyecto/semana-NN.ipynb`.
+
+El `.ipynb` es la fuente de verdad: `tools/crear_plantilla.py` y `tools/crear_plantilla_proyecto.py` solo regeneran
+las plantillas.
 
 ## Editar desde Colab
 Abra el cuaderno con el botón del README, edítelo y use *Archivo → Guardar una copia en GitHub*
