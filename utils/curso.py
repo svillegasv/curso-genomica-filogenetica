@@ -145,7 +145,7 @@ def proyecto(drive: bool = False) -> Path:
     """Crea (si no existe) la carpeta del proyecto y la deja en $PROYECTO.
 
     drive=True guarda el proyecto en Google Drive para que sobreviva entre sesiones
-    (se usa desde la semana 4). Sin Drive, en Colab el proyecto se pierde al cerrar la sesión.
+    (se usa desde la semana 3). Sin Drive, en Colab el proyecto se pierde al cerrar la sesión.
     """
     if "CURSO_PROYECTO" in os.environ:          # p. ej. en las pruebas automáticas
         base = Path(os.environ["CURSO_PROYECTO"])
@@ -169,7 +169,7 @@ CLONES = ["REL1166B", "REL2181A", "REL4538A", "REL7179B", "ZDB478", "ZDB17", "ZD
 
 
 def equipo(clon: str | None = None) -> str:
-    """Guarda (una sola vez, en la semana 4) o lee el clon asignado al equipo.
+    """Guarda (una sola vez, en la semana 3) o lee el clon asignado al equipo.
 
         curso.equipo("REL7179B")   # primera vez: queda guardado en la carpeta del proyecto
         CLON = curso.equipo()      # semanas siguientes: lo lee

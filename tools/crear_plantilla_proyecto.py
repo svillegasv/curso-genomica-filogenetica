@@ -24,7 +24,7 @@ Una línea que conecta lo aprendido en la sesión 1 con el problema: ¿qué camb
 nb.code(SETUP)
 nb.code("""
 p = curso.proyecto(drive=True)     # la carpeta del proyecto del equipo, en su Drive
-# Solo la primera vez (semana 4): escriba el clon asignado a su equipo y quite el # de la línea siguiente.
+# Solo la primera vez (semana 3): escriba el clon asignado a su equipo y quite el # de la línea siguiente.
 # curso.equipo("REL7179B")
 CLON = curso.equipo()
 """)

@@ -25,13 +25,15 @@ evolutiva de la población.
 Cada semana tiene dos cuadernos:
 
 - **Sesión 1, cuaderno guiado:** se aprende la técnica con datos de demostración, iguales para todos.
-- **Sesión 2, cuaderno de proyecto:** el equipo aplica la técnica a **su** clon.
+- **Sesión 2, cuaderno de proyecto:** el equipo aplica la técnica a **su** clon. En el bootcamp (semanas 1–3) la
+  sesión 2 es distinta: retos en parejas (semana 1), un *escape room* (semana 2) y, en la semana 3, el primer
+  contacto con el clon del equipo.
 
 1. Haga clic en **Abrir en Colab** junto al cuaderno.
 2. Ejecute primero la celda **⚙️ Configuración**.
 3. Guarde su copia: *Archivo → Guardar una copia en Drive*. Los cuadernos de proyecto van en la carpeta del proyecto
    de su equipo, donde también quedan sus resultados de una semana a otra.
-4. En la semana 4, registre una sola vez el clon de su equipo: `curso.equipo("…")`.
+4. En la semana 3, registre una sola vez el clon de su equipo: `curso.equipo("…")`.
 
 No necesita instalar nada: solo una cuenta de Google.
 
