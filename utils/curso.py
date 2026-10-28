@@ -152,7 +152,7 @@ def proyecto(drive: bool = False) -> Path:
     elif IN_COLAB and drive:
         from google.colab import drive as gdrive
         gdrive.mount("/content/drive")
-        base = Path("/content/drive/MyDrive/genomica-filogenetica")
+        base = Path("/content/drive/MyDrive/000-curso-genomica")
     elif IN_COLAB:
         base = Path("/content/proyecto")
     else:
