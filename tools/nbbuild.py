@@ -95,6 +95,17 @@ def ocultar_observaciones(md: str) -> str:
     return "\n".join(salida)
 
 
+def separar_desplegables(md: str) -> list[str]:
+    """Parte el texto para que cada <details>…</details> quede en su propia celda."""
+    partes, resto = [], md
+    while "<details>" in resto:
+        antes, _, despues = resto.partition("<details>")
+        dentro, _, resto = despues.partition("</details>")
+        partes += [antes.strip("\n"), "<details>" + dentro + "</details>"]
+    partes.append(resto.strip("\n"))
+    return [x for x in partes if x.strip()]
+
+
 class NB:
     def __init__(self):
         self.nb = nbf.v4.new_notebook()
@@ -105,7 +116,9 @@ class NB:
         }
 
     def md(self, s):
-        self.nb.cells.append(nbf.v4.new_markdown_cell(ocultar_observaciones(textwrap.dedent(s).strip("\n"))))
+        # Cada desplegable va solo en su celda: Colab mete dentro del <details> el texto que lo sigue en la misma celda
+        for parte in separar_desplegables(ocultar_observaciones(textwrap.dedent(s).strip("\n"))):
+            self.nb.cells.append(nbf.v4.new_markdown_cell(parte))
 
     def code(self, s):
         self.nb.cells.append(nbf.v4.new_code_cell(textwrap.dedent(s).strip("\n")))

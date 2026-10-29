@@ -20,6 +20,7 @@ Una línea que conecta esta sesión con el problema del semestre (el LTEE) y con
 """)
 nb.code(SETUP)
 nb.code("""
+#@title 🗺️ Mapa del curso: ¿dónde estamos? (ejecute la celda) { display-mode: "form" }
 es.mapa_curso("unix");   # cambie la clave por la etapa de la semana (ver es.ETAPAS)
 """)
 
