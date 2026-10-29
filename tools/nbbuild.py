@@ -110,6 +110,13 @@ class NB:
     def code(self, s):
         self.nb.cells.append(nbf.v4.new_code_cell(textwrap.dedent(s).strip("\n")))
 
+    def ejercicio(self, estudiante, respuesta):
+        """Celda de ejercicio: el estudiante ve `estudiante` (con COMPLETE); la respuesta completa va en una
+        nota interna (metadata["curso"]["respuesta"]) que solo usa tools/probar.py para ejecutar el cuaderno."""
+        celda = nbf.v4.new_code_cell(textwrap.dedent(estudiante).strip("\n"))
+        celda.metadata["curso"] = {"respuesta": textwrap.dedent(respuesta).strip("\n")}
+        self.nb.cells.append(celda)
+
     def save(self, path):
         self.md(FOOTER)
         nbf.write(self.nb, path)

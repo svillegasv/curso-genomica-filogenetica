@@ -3,6 +3,8 @@
     python tools/probar.py                         # todos los de notebooks/ y proyecto/
     python tools/probar.py notebooks/semana-01/*.ipynb
 
+Las celdas de ejercicio muestran COMPLETE al estudiante; para probarlas se usa la respuesta guardada en su nota
+interna (metadata["curso"]["respuesta"]). Una celda con COMPLETE sin respuesta interna se reporta como fallo.
 Los cuadernos ejecutados se guardan en .curso/probados/ (no se modifican los originales).
 El proyecto de prueba va a una carpeta temporal ($CURSO_PROYECTO).
 """
@@ -12,6 +14,7 @@ import tempfile
 import time
 from pathlib import Path
 
+import nbformat
 import papermill as pm
 
 RAIZ = Path(__file__).resolve().parents[1]
@@ -22,11 +25,27 @@ os.environ.setdefault("CURSO_EQUIPO", "REL7179B")     # clon de prueba para los 
 salida = RAIZ / ".curso" / "probados"
 salida.mkdir(parents=True, exist_ok=True)
 
+
+def con_respuestas(nb_path: Path) -> Path:
+    """Copia del cuaderno con cada COMPLETE reemplazado por la respuesta interna de su celda."""
+    nb = nbformat.read(nb_path, as_version=4)
+    for i, celda in enumerate(nb.cells):
+        respuesta = celda.get("metadata", {}).get("curso", {}).get("respuesta")
+        if respuesta:
+            celda.source = respuesta
+        elif celda.cell_type == "code" and "COMPLETE" in celda.source:
+            raise ValueError(f"la celda {i} tiene COMPLETE pero no tiene respuesta interna (use nb.ejercicio)")
+    destino = salida / "entrada" / nb_path.name
+    destino.parent.mkdir(exist_ok=True)
+    nbformat.write(nb, destino)
+    return destino
+
+
 fallos = []
 for nb in cuadernos:
     inicio = time.time()
     try:
-        pm.execute_notebook(str(nb), str(salida / nb.name), cwd=str(nb.resolve().parent),
+        pm.execute_notebook(str(con_respuestas(nb)), str(salida / nb.name), cwd=str(nb.resolve().parent),
                             kernel_name="python3", progress_bar=False)
         print(f"✔ {nb}  ({time.time() - inicio:.0f} s)")
     except Exception as e:  # papermill.PapermillExecutionError y afines

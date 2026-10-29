@@ -60,9 +60,14 @@ nb.md("""
 ### Ejercicio guiado
 Reemplace cada `COMPLETE` por su respuesta.
 """)
-nb.code("""
+# Ejercicio: el estudiante ve COMPLETE; la respuesta va aparte (la usa solo tools/probar.py)
+nb.ejercicio("""
 %%bash
-# Ejercicio 1: cuente las líneas del archivo (en la versión del estudiante: wc COMPLETE data/processed/ejemplo.fasta)
+# Ejercicio 1: cuente las líneas del archivo
+cd $PROYECTO
+wc COMPLETE data/processed/ejemplo.fasta
+""", respuesta="""
+%%bash
 cd $PROYECTO
 wc -l data/processed/ejemplo.fasta
 """)
@@ -90,8 +95,10 @@ nb.md("""
 
 ### Ejercicio guiado
 """)
-nb.code("""
-# Ejercicio 2: cuente cuántas G tiene cada secuencia (en la versión del estudiante: [COMPLETE for s in secuencias])
+nb.ejercicio("""
+# Ejercicio 2: cuente cuántas G tiene cada secuencia
+[COMPLETE for s in secuencias]
+""", respuesta="""
 [s.count("G") for s in secuencias]
 """)
 nb.md(solucion(2, """

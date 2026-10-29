@@ -16,6 +16,14 @@ GitHub Actions corre lo mismo en cada cambio y cada lunes (pestaña *Actions* de
 El `.ipynb` es la fuente de verdad: `tools/crear_plantilla.py` y `tools/crear_plantilla_proyecto.py` solo regeneran
 las plantillas.
 
+### Ejercicios con `COMPLETE`
+- El estudiante ve la celda con `COMPLETE`. La respuesta está en dos lugares: el desplegable «🔑 Solución», que es
+  texto y el estudiante sí ve, y una **nota interna** de la celda (`metadata → curso → respuesta`), que es invisible
+  y solo la usa `tools/probar.py` para ejecutar el cuaderno de principio a fin.
+- Si cambia un ejercicio, cambie los dos. Si una celda con `COMPLETE` se queda sin nota interna, `probar.py` lo
+  reporta: `la celda N tiene COMPLETE pero no tiene respuesta interna`.
+- En los cuadernos nuevos, la nota se crea con `nb.ejercicio(estudiante, respuesta=...)` de `tools/nbbuild.py`.
+
 ## Editar desde Colab
 Abra el cuaderno con el botón del README, edítelo y use *Archivo → Guardar una copia en GitHub*
 (rama `main`). Las salidas se limpian solas si el commit se hace en local con pre-commit; desde Colab,
