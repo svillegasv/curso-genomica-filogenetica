@@ -62,9 +62,19 @@ FOOTER = f"""---
 """
 
 
-def solucion(n, codigo: str) -> str:
-    """Celda de solución oculta (Colab la muestra plegada como formulario)."""
-    return f'#@title 🔑 Solución — Ejercicio {n} {{ display-mode: "form" }}\n' + textwrap.dedent(codigo).strip("\n")
+def solucion(titulo, codigo: str = "", explicacion: str = "") -> str:
+    """Celda de TEXTO con la solución en un desplegable cerrado (úsese con nb.md).
+
+    No se ejecuta nada: el estudiante la abre, copia el comando en SU celda y la corre.
+    `titulo` puede ser un número ("Solución del ejercicio 1") o un texto ("Respuestas").
+    """
+    resumen = f"Solución del ejercicio {titulo}" if isinstance(titulo, int) else titulo
+    partes = [f"<details><summary>🔑 <b>{resumen}</b></summary>", ""]
+    if codigo.strip():
+        partes += ["```", textwrap.dedent(codigo).strip("\n"), "```", ""]
+    if explicacion.strip():
+        partes += [textwrap.dedent(explicacion).strip("\n"), ""]
+    return "\n".join(partes + ["</details>"])
 
 
 def ocultar_observaciones(md: str) -> str:

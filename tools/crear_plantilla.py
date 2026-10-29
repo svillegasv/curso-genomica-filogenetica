@@ -66,10 +66,12 @@ nb.code("""
 cd $PROYECTO
 wc -l data/processed/ejemplo.fasta
 """)
-# En celdas de solución, la shell va con "!" (el #@title debe ser la primera línea, antes de cualquier %%bash)
-nb.code(solucion(1, """
-!cd $PROYECTO && wc -l data/processed/ejemplo.fasta
-"""))
+# Las soluciones son texto en un desplegable: no se ejecutan, el estudiante las copia en su celda
+nb.md(solucion(1, """
+%%bash
+cd $PROYECTO
+wc -l data/processed/ejemplo.fasta
+""", "Una o dos frases sobre por qué funciona."))
 
 nb.md("""
 ## Bloque 2 · Segunda idea de la sesión
@@ -92,8 +94,8 @@ nb.code("""
 # Ejercicio 2: cuente cuántas G tiene cada secuencia (en la versión del estudiante: [COMPLETE for s in secuencias])
 [s.count("G") for s in secuencias]
 """)
-nb.code(solucion(2, """
-print([s.count("G") for s in secuencias])
+nb.md(solucion(2, """
+[s.count("G") for s in secuencias]
 """))
 
 nb.md("""
