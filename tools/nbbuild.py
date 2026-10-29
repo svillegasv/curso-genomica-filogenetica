@@ -67,6 +67,24 @@ def solucion(n, codigo: str) -> str:
     return f'#@title 🔑 Solución — Ejercicio {n} {{ display-mode: "form" }}\n' + textwrap.dedent(codigo).strip("\n")
 
 
+def ocultar_observaciones(md: str) -> str:
+    """Convierte cada cita «> 🔎 …» en un desplegable cerrado, para no revelar la respuesta antes de ejecutar."""
+    lineas, salida, i = md.split("\n"), [], 0
+    while i < len(lineas):
+        if not lineas[i].startswith("> 🔎"):
+            salida.append(lineas[i])
+            i += 1
+            continue
+        bloque = []
+        while i < len(lineas) and lineas[i].startswith(">"):
+            bloque.append(lineas[i][1:].strip())
+            i += 1
+        texto = " ".join(bloque).removeprefix("🔎").strip().removeprefix("**Qué observamos.**").strip()
+        salida += ["<details><summary>🔎 <b>Qué observamos</b> (ábralo después de ejecutar)</summary>",
+                   "", texto, "", "</details>"]
+    return "\n".join(salida)
+
+
 class NB:
     def __init__(self):
         self.nb = nbf.v4.new_notebook()
@@ -77,7 +95,7 @@ class NB:
         }
 
     def md(self, s):
-        self.nb.cells.append(nbf.v4.new_markdown_cell(textwrap.dedent(s).strip("\n")))
+        self.nb.cells.append(nbf.v4.new_markdown_cell(ocultar_observaciones(textwrap.dedent(s).strip("\n"))))
 
     def code(self, s):
         self.nb.cells.append(nbf.v4.new_code_cell(textwrap.dedent(s).strip("\n")))
