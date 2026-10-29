@@ -26,9 +26,8 @@ def header(path, titulo, semana, ra, duracion, requisitos):
 
 **{CURSO}** · {semana} · {AUTOR}
 
-| 🎯 Resultado de aprendizaje | ⏱️ Duración | 🧰 Requisitos |
-|---|---|---|
-| {ra} | {duracion} | {requisitos} |
+**🎯 Resultado de aprendizaje:** {ra}<br>
+**⏱️ Duración:** {duracion} · **🧰 Requisitos:** {requisitos}
 
 ---
 """
