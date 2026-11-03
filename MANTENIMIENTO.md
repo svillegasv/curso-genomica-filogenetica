@@ -16,7 +16,9 @@ Cada semana tiene su carpeta, `notebooks/semana-NN/`, con sus dos cuadernos. El 
   En el bootcamp la sesión 2 no es de proyecto (retos, *escape room*), pero va en el mismo lugar.
 - Corrija la ruta del botón «Abrir en Colab» en la primera celda y agregue los dos enlaces a la tabla «Contenido»
   del README.
-- La clave de respuestas **no** va en el repositorio (es público): va en el taller del docente.
+- La clave de respuestas va en `privado/claves/semana-NN-<tema>.md`. La carpeta `privado/` está en `.gitignore`:
+  existe solo en el computador del docente y **nunca** se sube a GitHub (el repositorio es público). Tampoco tiene
+  copia en la nube: respáldela aparte.
 
 El `.ipynb` es la fuente de verdad: `tools/crear_plantilla.py` y `tools/crear_plantilla_proyecto.py` solo regeneran
 las plantillas.

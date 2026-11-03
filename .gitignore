@@ -7,3 +7,6 @@ __pycache__/
 data/*
 !data/manifest.tsv
 !data/README.md
+
+# Material privado del docente (claves, quizzes, rúbricas, retroalimentación): nunca se publica
+privado/
