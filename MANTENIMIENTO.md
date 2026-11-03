@@ -15,7 +15,8 @@ Cada semana tiene su carpeta, `notebooks/semana-NN/`, con sus dos cuadernos. El 
 - Sesión 2 (proyecto): copie `notebooks/00-plantilla-proyecto.ipynb` como `notebooks/semana-NN/2-<tema>.ipynb`.
   En el bootcamp la sesión 2 no es de proyecto (retos, *escape room*), pero va en el mismo lugar.
 - Corrija la ruta del botón «Abrir en Colab» en la primera celda y agregue los dos enlaces a la tabla «Contenido»
-  del README.
+  del README. Si la semana tiene preparación previa (opcional: una lectura o un video corto, con el enlace
+  comprobado), va en la columna «Antes de clase»; si no, «—».
 - La clave de respuestas va en `privado/claves/semana-NN-<tema>.md`. La carpeta `privado/` está en `.gitignore`:
   existe solo en el computador del docente y **nunca** se sube a GitHub (el repositorio es público). Tampoco tiene
   copia en la nube: respáldela aparte.

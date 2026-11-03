@@ -39,26 +39,26 @@ No necesita instalar nada: solo una cuenta de Google.
 
 ## Contenido
 
-Busque su semana y abra el cuaderno de cada sesión con su enlace.
+Busque su semana. Antes de clase puede revisar la preparación sugerida (es opcional y no todas las semanas la tienen); en clase abra el cuaderno de cada sesión con su enlace.
 
-| Semana | Unidad | Sesión 1 (guiado) | Sesión 2 |
-|---|---|---|---|
-| 1 | U0 · Bootcamp UNIX en Colab | [Orientarse en la shell](https://colab.research.google.com/github/svillegasv/curso-genomica-filogenetica/blob/main/notebooks/semana-01/1-orientarse.ipynb) | [Retos: el congelador del LTEE](https://colab.research.google.com/github/svillegasv/curso-genomica-filogenetica/blob/main/notebooks/semana-01/2-retos-congelador.ipynb) |
-| 2 | U0 · Bootcamp UNIX en Colab | en construcción | en construcción |
-| 3 | U0 · Bootcamp UNIX en Colab | en construcción | en construcción |
-| 4 | U1 · El problema, evolución y repaso de Python | en construcción | en construcción |
-| 5 | U2 · Datos de secuenciación y control de calidad | en construcción | en construcción |
-| 6 | U3 · Ensamblaje *de novo* | en construcción | en construcción |
-| 7 | U3 · Ensamblaje *de novo* | en construcción | en construcción |
-| 8 | U4 · Anotación | en construcción | en construcción |
-| 9 | U5 · Contaminación y taxonomía | en construcción | en construcción |
-| 10 | U6 · Mapeo de lecturas | en construcción | en construcción |
-| 11 | U7 · Llamado de variantes | en construcción | en construcción |
-| 12 | U8 · Variantes de interés | en construcción | en construcción |
-| 13 | U9 · Filogenética | en construcción | en construcción |
-| 14 | U9 · Filogenética | en construcción | en construcción |
-| 15 | U10 · Del cuaderno al pipeline (Snakemake) | en construcción | en construcción |
-| 16 | Informe final y sustentación | — | — |
+| Semana | Unidad | Antes de clase (opcional) | Sesión 1 (guiado) | Sesión 2 |
+|---|---|---|---|---|
+| 1 | U0 · Bootcamp UNIX en Colab | 📖 [Lectura: *Introducing the Shell*](https://swcarpentry.github.io/shell-novice/01-intro.html) (10 min) · 🎬 [Video: el árbol de carpetas de Linux](https://youtu.be/qvjRcZcW8CY) (8 min) | [Orientarse en la shell](https://colab.research.google.com/github/svillegasv/curso-genomica-filogenetica/blob/main/notebooks/semana-01/1-orientarse.ipynb) | [Retos: el congelador del LTEE](https://colab.research.google.com/github/svillegasv/curso-genomica-filogenetica/blob/main/notebooks/semana-01/2-retos-congelador.ipynb) |
+| 2 | U0 · Bootcamp UNIX en Colab | en construcción | en construcción | en construcción |
+| 3 | U0 · Bootcamp UNIX en Colab | en construcción | en construcción | en construcción |
+| 4 | U1 · El problema, evolución y repaso de Python | en construcción | en construcción | en construcción |
+| 5 | U2 · Datos de secuenciación y control de calidad | en construcción | en construcción | en construcción |
+| 6 | U3 · Ensamblaje *de novo* | en construcción | en construcción | en construcción |
+| 7 | U3 · Ensamblaje *de novo* | en construcción | en construcción | en construcción |
+| 8 | U4 · Anotación | en construcción | en construcción | en construcción |
+| 9 | U5 · Contaminación y taxonomía | en construcción | en construcción | en construcción |
+| 10 | U6 · Mapeo de lecturas | en construcción | en construcción | en construcción |
+| 11 | U7 · Llamado de variantes | en construcción | en construcción | en construcción |
+| 12 | U8 · Variantes de interés | en construcción | en construcción | en construcción |
+| 13 | U9 · Filogenética | en construcción | en construcción | en construcción |
+| 14 | U9 · Filogenética | en construcción | en construcción | en construcción |
+| 15 | U10 · Del cuaderno al pipeline (Snakemake) | en construcción | en construcción | en construcción |
+| 16 | Informe final y sustentación | — | — | — |
 
 ## Estructura del repositorio
 
