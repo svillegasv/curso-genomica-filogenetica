@@ -39,26 +39,29 @@ No necesita instalar nada: solo una cuenta de Google.
 
 ## Contenido
 
-| Semanas | Unidad | Cuadernos |
-|---|---|---|
-| 1–3 | U0 · Bootcamp UNIX en Colab | en construcción |
-| 4 | U1 · El problema, evolución y repaso de Python | en construcción |
-| 5 | U2 · Datos de secuenciación y control de calidad | en construcción |
-| 6–7 | U3 · Ensamblaje *de novo* | en construcción |
-| 8 | U4 · Anotación | en construcción |
-| 9 | U5 · Contaminación y taxonomía | en construcción |
-| 10 | U6 · Mapeo de lecturas | en construcción |
-| 11 | U7 · Llamado de variantes | en construcción |
-| 12 | U8 · Variantes de interés | en construcción |
-| 13–14 | U9 · Filogenética | en construcción |
-| 15 | U10 · Del cuaderno al pipeline (Snakemake) | en construcción |
-| 16 | Informe final y sustentación | — |
+Busque su semana y abra el cuaderno de cada sesión con su enlace.
+
+| Semana | Unidad | Sesión 1 (guiado) | Sesión 2 |
+|---|---|---|---|
+| 1 | U0 · Bootcamp UNIX en Colab | [Orientarse en la shell](https://colab.research.google.com/github/svillegasv/curso-genomica-filogenetica/blob/main/notebooks/semana-01/1-orientarse.ipynb) | [Retos: el congelador del LTEE](https://colab.research.google.com/github/svillegasv/curso-genomica-filogenetica/blob/main/notebooks/semana-01/2-retos-congelador.ipynb) |
+| 2–3 | U0 · Bootcamp UNIX en Colab | en construcción | en construcción |
+| 4 | U1 · El problema, evolución y repaso de Python | en construcción | en construcción |
+| 5 | U2 · Datos de secuenciación y control de calidad | en construcción | en construcción |
+| 6–7 | U3 · Ensamblaje *de novo* | en construcción | en construcción |
+| 8 | U4 · Anotación | en construcción | en construcción |
+| 9 | U5 · Contaminación y taxonomía | en construcción | en construcción |
+| 10 | U6 · Mapeo de lecturas | en construcción | en construcción |
+| 11 | U7 · Llamado de variantes | en construcción | en construcción |
+| 12 | U8 · Variantes de interés | en construcción | en construcción |
+| 13–14 | U9 · Filogenética | en construcción | en construcción |
+| 15 | U10 · Del cuaderno al pipeline (Snakemake) | en construcción | en construcción |
+| 16 | Informe final y sustentación | — | — |
 
 ## Estructura del repositorio
 
 ```
-notebooks/   cuadernos guiados de la sesión 1 (00-plantilla.ipynb: estructura estándar)
-proyecto/    cuadernos de proyecto de la sesión 2 (00-plantilla-proyecto.ipynb)
+notebooks/   una carpeta por semana (semana-NN/) con sus dos cuadernos: 1-… (sesión 1) y 2-… (sesión 2)
+             plantillas: 00-plantilla.ipynb (guiado) · 00-plantilla-proyecto.ipynb (proyecto)
 slides/      apoyo visual semanal (HTML; se abre en el navegador)
 utils/       curso.py (instalación, datos, proyecto) · estilo.py (figuras y mapa del curso)
 data/        manifest.tsv: los datos están en Zenodo, no en git

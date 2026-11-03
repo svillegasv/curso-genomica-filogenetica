@@ -10,8 +10,13 @@ python tools/probar.py notebooks/semana-01/*.ipynb
 GitHub Actions corre lo mismo en cada cambio y cada lunes (pestaña *Actions* del repositorio).
 
 ## Crear un cuaderno nuevo
-- Cuaderno guiado (sesión 1): copie `notebooks/00-plantilla.ipynb` a `notebooks/semana-NN/`.
-- Cuaderno de proyecto (sesión 2): copie `proyecto/00-plantilla-proyecto.ipynb` a `proyecto/semana-NN.ipynb`.
+Cada semana tiene su carpeta, `notebooks/semana-NN/`, con sus dos cuadernos. El número inicial dice la sesión:
+- Sesión 1 (guiado): copie `notebooks/00-plantilla.ipynb` como `notebooks/semana-NN/1-<tema>.ipynb`.
+- Sesión 2 (proyecto): copie `notebooks/00-plantilla-proyecto.ipynb` como `notebooks/semana-NN/2-<tema>.ipynb`.
+  En el bootcamp la sesión 2 no es de proyecto (retos, *escape room*), pero va en el mismo lugar.
+- Corrija la ruta del botón «Abrir en Colab» en la primera celda y agregue los dos enlaces a la tabla «Contenido»
+  del README.
+- La clave de respuestas **no** va en el repositorio (es público): va en el taller del docente.
 
 El `.ipynb` es la fuente de verdad: `tools/crear_plantilla.py` y `tools/crear_plantilla_proyecto.py` solo regeneran
 las plantillas.

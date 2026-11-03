@@ -1,4 +1,4 @@
-"""Genera proyecto/00-plantilla-proyecto.ipynb: el cuaderno de proyecto de una semana (sesión 2).
+"""Genera notebooks/00-plantilla-proyecto.ipynb: el cuaderno de proyecto de una semana (sesión 2).
 
     python tools/crear_plantilla_proyecto.py
 
@@ -9,7 +9,7 @@ from pathlib import Path
 
 from nbbuild import NB, SETUP, header
 
-PATH = "proyecto/00-plantilla-proyecto.ipynb"
+PATH = "notebooks/00-plantilla-proyecto.ipynb"
 nb = NB()
 
 nb.md(header(PATH, "Proyecto · Semana N · Título", "Semana N (Unidad U) · Sesión 2",

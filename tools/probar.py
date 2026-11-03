@@ -1,6 +1,6 @@
 """Ejecuta los cuadernos de principio a fin y reporta cuáles fallan (lo mismo que GitHub Actions).
 
-    python tools/probar.py                         # todos los de notebooks/ y proyecto/
+    python tools/probar.py                         # todos los de notebooks/
     python tools/probar.py notebooks/semana-01/*.ipynb
 
 Las celdas de ejercicio muestran COMPLETE al estudiante; para probarlas se usa la respuesta guardada en su nota
@@ -18,8 +18,7 @@ import nbformat
 import papermill as pm
 
 RAIZ = Path(__file__).resolve().parents[1]
-cuadernos = [Path(a) for a in sys.argv[1:]] or sorted(
-    nb for carpeta in ("notebooks", "proyecto") for nb in (RAIZ / carpeta).rglob("*.ipynb"))
+cuadernos = [Path(a) for a in sys.argv[1:]] or sorted((RAIZ / "notebooks").rglob("*.ipynb"))
 os.environ.setdefault("CURSO_PROYECTO", tempfile.mkdtemp(prefix="proyecto-"))
 os.environ.setdefault("CURSO_EQUIPO", "REL7179B")     # clon de prueba para los cuadernos de proyecto
 salida = RAIZ / ".curso" / "probados"
