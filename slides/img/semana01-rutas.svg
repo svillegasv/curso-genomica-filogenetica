@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="DejaVu Sans, Helvetica Neue, Arial, sans-serif">
+  <title>Rutas absolutas y relativas en el árbol de carpetas de Colab</title>
+  <defs>
+    <marker id="fn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#eb6834"/>
+    </marker>
+  </defs>
+  <rect width="960" height="520" fill="#fcfcfb"/>
+
+  <!-- Conectores del árbol (gris) -->
+  <g fill="none" stroke="#c3c2b7" stroke-width="2">
+    <path d="M58,58 V110 H128"/>
+    <path d="M58,58 V170 H128"/>
+    <path d="M148,178 V230 H228"/>
+    <path d="M148,178 V290 H228"/>
+    <path d="M248,298 V350 H328"/>
+    <path d="M248,298 V470 H328"/>
+    <path d="M348,358 V410 H428"/>
+  </g>
+  <!-- Ruta absoluta (azul): / → content → proyecto → scripts -->
+  <g fill="none" stroke="#2a78d6" stroke-width="5" stroke-linecap="round">
+    <path d="M58,58 V170 H128"/>
+    <path d="M148,178 V290 H228"/>
+    <path d="M248,298 V470 H328"/>
+  </g>
+
+  <!-- Nodos -->
+  <g font-size="22" fill="#0b0b0b">
+    <text x="40" y="52" font-weight="700" fill="#2a78d6">/</text>
+    <text x="134" y="117">root/ <tspan fill="#898781">(~, su casa)</tspan></text>
+    <text x="134" y="177" font-weight="700">content/</text>
+    <text x="234" y="237">herencia/</text>
+    <text x="234" y="297" font-weight="700">proyecto/</text>
+    <text x="334" y="357">data/</text>
+    <text x="434" y="417" font-weight="700">raw/</text>
+    <text x="334" y="477" font-weight="700">scripts/</text>
+  </g>
+  <text x="488" y="417" font-size="18" fill="#eb6834" font-weight="700">★ usted está aquí</text>
+  <text x="334" y="505" font-size="18" fill="#52514e">◎ destino</text>
+
+  <!-- Ruta relativa (naranja): raw → data → proyecto → scripts -->
+  <g fill="none" stroke="#eb6834" stroke-width="3" stroke-dasharray="7 5">
+    <path d="M478,398 C470,370 440,352 402,350" marker-end="url(#fn)"/>
+    <path d="M392,336 C390,315 380,300 360,292" marker-end="url(#fn)"/>
+    <path d="M362,300 C760,300 760,470 452,470" marker-end="url(#fn)"/>
+  </g>
+  <g font-size="20" font-weight="700" fill="#eb6834">
+    <text x="462" y="368">..</text>
+    <text x="398" y="318">..</text>
+    <text x="684" y="398">scripts</text>
+  </g>
+  <!-- Leyenda -->
+  <rect x="600" y="70" width="330" height="200" rx="10" fill="#ffffff" stroke="#e1e0d9" stroke-width="2"/>
+  <text x="620" y="105" font-size="20" font-weight="700" fill="#2a78d6">Absoluta</text>
+  <text x="620" y="135" font-size="19" fill="#0b0b0b" font-family="DejaVu Sans Mono, Menlo, monospace">/content/proyecto/scripts</text>
+  <text x="620" y="160" font-size="16" fill="#52514e">empieza en / · sirve desde cualquier lugar</text>
+  <text x="620" y="205" font-size="20" font-weight="700" fill="#eb6834">Relativa (desde raw/)</text>
+  <text x="620" y="235" font-size="19" fill="#0b0b0b" font-family="DejaVu Sans Mono, Menlo, monospace">../../scripts</text>
+  <text x="620" y="260" font-size="16" fill="#52514e">depende de dónde esté parado</text>
+</svg>

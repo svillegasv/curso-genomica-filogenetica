@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" font-family="DejaVu Sans, Helvetica Neue, Arial, sans-serif">
+  <title>Subshells: por qué !cd no se queda y %cd sí</title>
+  <defs>
+    <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#52514e"/>
+    </marker>
+  </defs>
+  <rect width="960" height="470" fill="#fcfcfb"/>
+
+  <!-- Columna izquierda: !cd -->
+  <text x="235" y="40" text-anchor="middle" font-size="26" font-weight="700" fill="#e34948">!cd proyecto</text>
+  <rect x="85" y="65" width="300" height="70" rx="10" fill="#e3eefb" stroke="#2a78d6" stroke-width="2"/>
+  <text x="235" y="95" text-anchor="middle" font-size="20" font-weight="700" fill="#0b0b0b">Cuaderno (padre)</text>
+  <text x="235" y="122" text-anchor="middle" font-size="18" fill="#52514e">está en /content</text>
+
+  <path d="M235,135 V185" stroke="#52514e" stroke-width="2" marker-end="url(#flecha)"/>
+  <text x="248" y="167" font-size="16" fill="#52514e">nace una hija</text>
+  <rect x="85" y="190" width="300" height="70" rx="10" fill="#fdebea" stroke="#e34948" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="235" y="220" text-anchor="middle" font-size="19" fill="#0b0b0b">Shell hija: se mueve a</text>
+  <text x="235" y="246" text-anchor="middle" font-size="19" fill="#0b0b0b">/content/proyecto… y muere ✕</text>
+
+  <path d="M85,100 C30,100 30,350 82,350" fill="none" stroke="#52514e" stroke-width="2" marker-end="url(#flecha)"/>
+  <text x="22" y="290" font-size="15" fill="#52514e" transform="rotate(-90 22 290)">otra hija</text>
+  <rect x="85" y="315" width="300" height="70" rx="10" fill="#fcfcfb" stroke="#898781" stroke-width="2"/>
+  <text x="235" y="345" text-anchor="middle" font-size="19" fill="#0b0b0b">!pwd → otra hija nueva</text>
+  <text x="235" y="371" text-anchor="middle" font-size="19" font-weight="700" fill="#e34948">imprime /content</text>
+  <text x="235" y="430" text-anchor="middle" font-size="18" fill="#52514e">El padre nunca se movió.</text>
+
+  <line x1="480" y1="30" x2="480" y2="440" stroke="#e1e0d9" stroke-width="2"/>
+
+  <!-- Columna derecha: %cd -->
+  <text x="725" y="40" text-anchor="middle" font-size="26" font-weight="700" fill="#1baf7a">%cd proyecto</text>
+  <rect x="575" y="65" width="300" height="70" rx="10" fill="#e3eefb" stroke="#2a78d6" stroke-width="2"/>
+  <text x="725" y="95" text-anchor="middle" font-size="20" font-weight="700" fill="#0b0b0b">Cuaderno (padre)</text>
+  <text x="725" y="122" text-anchor="middle" font-size="18" fill="#52514e">se mueve a /content/proyecto</text>
+
+  <path d="M725,135 V185" stroke="#52514e" stroke-width="2" marker-end="url(#flecha)"/>
+  <text x="738" y="167" font-size="16" fill="#52514e">la hija hereda la carpeta</text>
+  <rect x="575" y="190" width="300" height="70" rx="10" fill="#e6f6f0" stroke="#1baf7a" stroke-width="2"/>
+  <text x="725" y="220" text-anchor="middle" font-size="19" fill="#0b0b0b">!pwd → nace en</text>
+  <text x="725" y="246" text-anchor="middle" font-size="19" font-weight="700" fill="#1baf7a">/content/proyecto ✔</text>
+  <text x="725" y="320" text-anchor="middle" font-size="18" fill="#52514e">Lo mismo con %%bash:</text>
+  <text x="725" y="346" text-anchor="middle" font-size="18" fill="#52514e">cada celda es una hija nueva</text>
+  <text x="725" y="372" text-anchor="middle" font-size="18" fill="#52514e">que nace donde está el padre.</text>
+  <text x="725" y="430" text-anchor="middle" font-size="18" fill="#52514e">Para moverse de verdad: %cd</text>
+</svg>
